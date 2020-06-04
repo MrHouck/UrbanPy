@@ -25,9 +25,10 @@ class UrbanDictionary:
             raise ValueError('Urban Dictionary API returned nothing.')
         if ('list' not in data or len(data['list']) < 1):
             return result
-        for item in data['list']:           
+        for item in data['list']:     
+            print(item)
             _def = d.Definition(
-                defintiion=item['defintiion'],
+                definition=item['definition'],
                 word=item['word'],
                 permalink=item['permalink'],
                 thumbs_up=item['thumbs_up'],
